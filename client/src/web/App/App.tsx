@@ -1,15 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
-import Income from '../pages/Income';
-import Outcome from '../pages/Outcome';
+import routes from '../../routes';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/outcome' element={<Outcome />} />
-        <Route path='/income' element={<Income />} />
+        {routes.list.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={route.pcComponent}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
   );
