@@ -16,8 +16,8 @@ export default class Page {
   constructor(params: PageParams) {
     this.#path = params.path;
     this.#title = params.title;
-    this.#pcComponent = params.pcComponent ?? <DefaultPage />;
-    this.#mobileComponent = params.mobileComponent ?? <DefaultPage />;
+    this.#pcComponent = params.pcComponent ?? this.setDefaultPage();
+    this.#mobileComponent = params.mobileComponent ?? this.setDefaultPage();
   }
 
   get path() {
@@ -32,6 +32,8 @@ export default class Page {
   get mobileComponent() {
     return this.#mobileComponent;
   }
-}
 
-const DefaultPage = () => <div>This is Default Page</div>;
+  private setDefaultPage() {
+    return React.createElement('div', null, 'This is Default Page');
+  }
+}
