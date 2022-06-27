@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import COLOR from '../../../../../styles/colors';
 
 export const Menus = styled.article`
-  margin-top: 25px;
   border: 1px solid ${COLOR.GREY_400};
   border-radius: 4px;
   padding: 20px;
