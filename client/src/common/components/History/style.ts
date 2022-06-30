@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import COLOR from '../../../styles/colors';
+import Price from '../Price';
 
 export const HistoryWrapper = styled.article`
   border: 1px solid ${COLOR.GREY_500};
@@ -24,4 +25,6 @@ export const HistoryItem = styled.li``;
 
 export const HistoryItemDate = styled.span``;
 
-export const HistoryDetail = styled.div``;
+export const HistoryDetail = styled(Price)`
+  display: block;
+`;

@@ -10,7 +10,12 @@ const TotalAmount = (props: Props) => {
       <Styled.AmountTypeTitle>
         {props.type === 'INCOME' ? '수입' : '소비'}
       </Styled.AmountTypeTitle>
-      <Styled.TotalAmount>2,078,000 원</Styled.TotalAmount>
+      <Styled.TotalAmount
+        end={2_078_000}
+        seperator=','
+        prefix='+'
+        suffix='원'
+      />
     </Styled.TotalAmountWrapper>
   );
 };
