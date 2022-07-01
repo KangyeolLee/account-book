@@ -3,7 +3,7 @@ import COLOR from '../../../styles/colors';
 import { notRenderButton } from '../../../styles/helper';
 
 export const Calendar = styled.article`
-  border: 1px solid ${COLOR.GREY_400};
+  border: 1px solid ${COLOR.GREY_500};
   border-radius: 4px;
   padding: 20px;
   display: flex;
