@@ -3,8 +3,9 @@ import COLOR from '../../../styles/colors';
 import { initBoxModel } from '../../../styles/helper';
 import Price from '../Price';
 
-export const TotalAmountWrapper = styled.article`
-  border: 1px solid ${COLOR.GREY_500};
+export const TotalAmountWrapper = styled.article<{ $border?: boolean }>`
+  border: ${(props) =>
+    props.$border ? `1px solid ${COLOR.GREY_500}` : 'none'};
   border-radius: 4px;
   padding: 15px;
   display: flex;
