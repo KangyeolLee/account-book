@@ -3,9 +3,12 @@ import BaeCalendar from 'react-calendar';
 import dayjs from 'dayjs';
 
 import * as Styled from './style';
+import { useAtom } from 'jotai';
+import { selectedDateAtom } from '../../../jotai/atoms/date';
 
 const Calendar = () => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useAtom(selectedDateAtom);
+
   return (
     <Styled.Calendar>
       <BaeCalendar
