@@ -2,6 +2,7 @@ import * as Styled from './style';
 
 type Props = {
   type: 'OUTCOME' | 'INCOME';
+  amount: number;
 };
 
 const TotalAmount = (props: Props) => {
@@ -11,7 +12,7 @@ const TotalAmount = (props: Props) => {
         {props.type === 'INCOME' ? '수입' : '소비'}
       </Styled.AmountTypeTitle>
       <Styled.TotalAmount
-        end={2_078_000}
+        end={props.amount}
         seperator=','
         prefix='+'
         suffix='원'

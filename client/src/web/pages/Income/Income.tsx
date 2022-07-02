@@ -6,7 +6,7 @@ import * as Styled from './style';
 const Income = () => {
   return (
     <Styled.Income>
-      <TotalAmount type='INCOME' />
+      <TotalAmount type='INCOME' amount={3_000_000} />
       <Calendar />
       <History />
     </Styled.Income>
