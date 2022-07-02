@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Price from '../../../../../common/components/Price';
 import COLOR from '../../../../../styles/colors';
 
 export const TotalSummary = styled.article`
@@ -9,16 +8,6 @@ export const TotalSummary = styled.article`
   display: flex;
   flex-direction: column;
 `;
-
-export const PriceSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const SubTitle = styled.h3``;
-
-export const PriceCounter = styled(Price)``;
 
 export const Divider = styled.hr`
   height: 1px;

@@ -1,36 +1,13 @@
+import TotalAmount from '../../../../../common/components/TotalAmount';
 import * as Styled from './style';
 
 const TotalSummary = () => {
   return (
     <Styled.TotalSummary>
-      <Styled.PriceSection>
-        <Styled.SubTitle>수입</Styled.SubTitle>
-        <Styled.PriceCounter
-          end={3_000_000}
-          seperator=','
-          prefix='+'
-          suffix='원'
-        />
-      </Styled.PriceSection>
-      <Styled.PriceSection>
-        <Styled.SubTitle>소비</Styled.SubTitle>
-        <Styled.PriceCounter
-          end={1_000_000}
-          seperator=','
-          prefix='+'
-          suffix='원'
-        />
-      </Styled.PriceSection>
+      <TotalAmount type='INCOME' amount={3_000_000} />
+      <TotalAmount type='OUTCOME' amount={2_000_000} />
       <Styled.Divider />
-      <Styled.PriceSection>
-        <Styled.SubTitle>총합</Styled.SubTitle>
-        <Styled.PriceCounter
-          end={2_000_000}
-          seperator=','
-          prefix='+'
-          suffix='원'
-        />
-      </Styled.PriceSection>
+      <TotalAmount type='TOTAL' amount={1_000_000} />
     </Styled.TotalSummary>
   );
 };
