@@ -1,18 +1,9 @@
-import { useAtom } from 'jotai';
-import { useEffect } from 'react';
-import { selectedDayAtom } from '../../../jotai/atoms/date';
 import * as Styled from './style';
 
 const History = () => {
-  const [selectedDay, initDateToToday] = useAtom(selectedDayAtom);
-
-  useEffect(() => {
-    return () => initDateToToday(new Date());
-  }, []);
-
   return (
     <Styled.HistoryWrapper>
-      <Styled.Title>전체 내역 (오늘날짜 : {selectedDay}일)</Styled.Title>
+      <Styled.Title>전체 내역 </Styled.Title>
       <Styled.History>
         <Styled.HistoryItem>
           <Styled.HistoryItemDate>26일 일요일</Styled.HistoryItemDate>
