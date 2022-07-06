@@ -29,6 +29,6 @@ export class UsersController {
   @Get('/:id')
   async getUserInfo(@Param('id') userId: string): Promise<any> {
     console.log(userId);
-    return;
+    return userId;
   }
 }
