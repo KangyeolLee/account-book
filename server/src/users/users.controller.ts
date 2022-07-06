@@ -2,12 +2,16 @@ import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { createUserDto } from './dto/create-user.dto';
 import { UserLoginDto } from './dto/user-login.dto';
 import { VerifyEmailDto } from './dto/verify-email.dto';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
+  constructor(private userService: UsersService) {}
+
   @Post()
   async createUser(@Body() dto: createUserDto): Promise<void> {
-    console.log(dto);
+    const { name, email, password } = dto;
+    await this.userService.createUser(name, email, password);
   }
 
   @Post('/email-verify')
