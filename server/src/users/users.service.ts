@@ -15,6 +15,18 @@ export class UsersService {
     await this.sendMemberJoinEmail(email, signupVerifyToken);
   }
 
+  async verifyEmail(signupVerifyToken: string): Promise<string> {
+    throw new Error('Method not implemented');
+  }
+
+  async login(email: string, password: string): Promise<string> {
+    throw new Error('Method not implemented');
+  }
+
+  async getUserInfo(userId: string): Promise<any> {
+    throw new Error('Method not implemented');
+  }
+
   private checkUserExists(email: string) {
     return false;
   }
