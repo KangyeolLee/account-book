@@ -8,3 +8,8 @@ export class LoggerMiddleware implements NestMiddleware {
     next();
   }
 }
+
+export function globalLogger(req: Request, res: Response, next: NextFunction) {
+  console.log('Global Logger...');
+  next();
+}
